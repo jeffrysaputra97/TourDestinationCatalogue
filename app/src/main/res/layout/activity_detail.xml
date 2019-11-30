@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <ImageView
+                android:id="@+id/detail_img_item_photo"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:scaleType="centerCrop"
+                tools:background="@android:color/darker_gray"
+                android:contentDescription="@string/img_item_photo_content_desc" />
+            
+            <TextView
+                android:id="@+id/detail_tv_location_name"
+                style="@style/Text.Field.Large"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/detail_img_item_photo"
+                tools:text="Location Name"
+                android:textSize="18sp"/>
+            
+            <TextView
+                android:id="@+id/detail_tv_location_shortdesc"
+                style="@style/Text.Content"
+                android:layout_toEndOf="@id/detail_img_item_photo"
+                android:layout_below="@+id/detail_tv_location_name"
+                tools:text="Short Description"/>
+
+            <TextView
+                style="@style/Text.Field.Small"
+                android:layout_toEndOf="@+id/detail_img_item_photo"
+                android:layout_above="@id/detail_tv_currency_content"
+                android:text="@string/currency_label"/>
+
+            <TextView
+                android:id="@+id/detail_tv_currency_content"
+                style="@style/Text.Content"
+                android:layout_toEndOf="@id/detail_img_item_photo"
+                android:layout_above="@id/detail_tv_language_label"
+                tools:text="Location Currency"/>
+
+            <TextView
+                android:id="@+id/detail_tv_language_label"
+                style="@style/Text.Field.Small"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/detail_img_item_photo"
+                android:layout_above="@id/detail_tv_language_content"
+                android:text="@string/language_label"/>
+
+            <TextView
+                android:id="@+id/detail_tv_language_content"
+                style="@style/Text.Content"
+                android:layout_toEndOf="@id/detail_img_item_photo"
+                android:layout_above="@id/detail_img_hotel_icon"
+                tools:text="Location Language"/>
+
+            <ImageView
+                android:id="@+id/detail_img_hotel_icon"
+                style="@style/IconDetail"
+                android:layout_toEndOf="@id/detail_img_item_photo"
+                android:layout_above="@id/detail_img_flight_icon"
+                android:src="@drawable/baseline_hotel_24"
+                android:contentDescription="@string/hotel_icon_content_desc" />
+
+            <TextView
+                android:id="@+id/detail_tv_hotel_pricerange"
+                style="@style/Text.Content"
+                android:layout_toEndOf="@id/detail_img_hotel_icon"
+                android:layout_alignTop="@id/detail_img_hotel_icon"
+                tools:text="Rp. 564,620 - Rp. 1,960,960"/>
+
+            <ImageView
+                android:id="@+id/detail_img_flight_icon"
+                style="@style/IconDetail"
+                android:layout_toEndOf="@id/detail_img_item_photo"
+                android:layout_alignBottom="@id/detail_img_item_photo"
+                android:src="@drawable/baseline_flight_24"
+                android:contentDescription="@string/flight_icon_content_desc" />
+
+            <TextView
+                android:id="@+id/detail_tv_flight_durationprice"
+                style="@style/Text.Content"
+                android:layout_toEndOf="@id/detail_img_flight_icon"
+                android:layout_alignParentBottom="true"
+                tools:text="4 h 55 min, \nfrom Rp. 3,631,770"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/Text.Field.Medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/people_also_viewed"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardview_locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_cardview_location"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:background="#f2f2f2">
+            <TextView
+                style="@style/Text.Field.Medium"
+                android:text="@string/fun_fact_label"/>
+
+            <TextView
+                android:id="@+id/detail_tv_location_fact"
+                style="@style/Text.Content"
+                android:layout_marginTop="8dp"
+                tools:text="Location Fun Fact"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Text.Field.Medium"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/detail_label"/>
+
+        <TextView
+            android:id="@+id/detail_tv_location_detail"
+            style="@style/Text.Content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            tools:text="Location Detail"/>
+    </LinearLayout>
+</ScrollView>

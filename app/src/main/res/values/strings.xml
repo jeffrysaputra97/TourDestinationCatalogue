@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TourDestinationCatalogue</string>
+    <string name="location_name">Nama Lokasi</string>
+    <string name="detail">Detil Lokasi</string>
+    <string name="dev_name">Jeffry Saputra</string>
+    <string name="dev_email">jeffrysaputra97@gmail.com</string>
+    <string name="currency_label">Currency</string>
+    <string name="language_label">Language</string>
+    <string name="people_also_viewed">People Also Viewed</string>
+    <string name="fun_fact_label">Did You Know?</string>
+    <string name="detail_label">Tourism Info</string>
+    <string name="img_item_photo_content_desc">Picture of the location</string>
+    <string name="hotel_icon_content_desc">Hotel Icon</string>
+    <string name="flight_icon_content_desc">Flight Icon</string>
+    <string name="about">About</string>
+</resources>
